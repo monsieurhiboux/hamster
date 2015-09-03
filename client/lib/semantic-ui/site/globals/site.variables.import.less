@@ -19,6 +19,9 @@ header{
 	.fluid{
 		margin: 0 !important;
 	}
+	.hamster-scrollbar{
+		
+	}	
 	.hamster-scrollbar > .item{
 		border-radius: 0 !important;
 		margin:0 !important;
@@ -41,7 +44,7 @@ header{
 	    color: rgb(39, 39, 39);
 	}
 	.header-config{
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		width: 250px;
 		button{
@@ -80,8 +83,12 @@ main{
     		border: 0;
     		background-color: #FBFBFB;
     		width: 100%;
-    		height: 80vh;
     		resize: none;
+    		bottom: 0;
+		    position: absolute;
+		    top: 3.7rem;
+		    right: 0;
+		    padding: 0 1.5rem;
     	}
     }
 }

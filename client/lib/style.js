@@ -1,3 +1,6 @@
+Template.layout.onRendered(function(){
+});
+
 Template.header.onRendered(function(){
   this.$('.user').popup();
 });
