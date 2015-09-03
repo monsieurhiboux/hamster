@@ -7,3 +7,6 @@
 meteor-platform
 autopublish
 insecure
+semantic:ui
+flemay:less-autoprefixer
+iron:router
