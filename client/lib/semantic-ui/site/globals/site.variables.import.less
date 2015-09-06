@@ -52,7 +52,7 @@ header{
 }
 
 main{
-	min-width:500px;
+	min-width:200px;
 	position: absolute;
 	left: 250px;
 	top: 0;
@@ -91,3 +91,22 @@ main{
     	}
     }
 }
+
+ @media screen and (max-width: 600px) {
+      main {
+        left:0;
+        padding: 0 0.5rem;
+        .note-action-bar{
+        	.note-action-bar-date {
+	    		margin-left: 2.2rem;
+	    	}
+        }
+        .note-content textarea {
+		    border: 0;
+		    padding: 0 0.5rem;
+		}
+      }
+      header {
+        display:none;
+      }
+    }
