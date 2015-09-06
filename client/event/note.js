@@ -13,15 +13,15 @@ Template.note.events({
 			}else{
 				Session.set("search_query", '');
 				$("#actionSearch").val('');
+				setTimeout(function(){$(".hamster-scrollbar a").first().click()}, 50); // too bad
 			}			
 		}
-
 		var search = $('#actionSearch').val();
 		if(search != ""){
 			$('#actionSearch').val('');
 			Session.set("search_query", '');
+			
 		}
-
 		var note = $('#editNote').val();
 		if(note == ""){
 			$(".hamster-scrollbar a").first().click();
@@ -39,6 +39,7 @@ Template.note.events({
 			}});
 			Session.set('noteDateNote', date.valueOf());
 		};
+		$(".hamster-scrollbar a").first().click();
 	},
 	'click #actionAddNote': function (e) {
 		var date = new Date();

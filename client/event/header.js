@@ -15,6 +15,8 @@ Template.header.events({
 		$("#editNote").val('');
 		$(".item").removeClass( "active" )
 		Session.set("search_query", search);
-	}
-	
+		if(search == ""){
+			setTimeout(function(){$(".hamster-scrollbar a").first().click()}, 50); // too bad
+		}
+	}	
 });
