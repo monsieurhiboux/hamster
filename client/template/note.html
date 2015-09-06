@@ -6,11 +6,7 @@
 		<button id="actionDeleteNote" data="{{noteId}}" class="ui compact icon button note-action-bar-option">
 		  <i class="trash alternate icon"></i>
 		</button>
-		{{#if notes.count}}
-			<div class="note-action-bar-date">{{momentShort noteDateNote}}</div>
-		{{else}}
-			<div class="note-action-bar-date">{{moFormat moNow 'DD/MM/YYYY, hh:mm'}}</div>
-		{{/if}}
+		<div class="note-action-bar-date">{{momentShort noteDateNote}}</div>
 	</div>
 	<div class="note-content">
 		<form id="viewEditNote" data="{{noteId}}">

@@ -2,14 +2,26 @@ Template.note.events({
 	'focus #editNote': function(e){
 		var notesNumber = $('.hamster-scrollbar').attr('data');
 		if(notesNumber == 0){
-			var date = new Date();
-			Notes.insert({
-				content: 'New note', 
-				dateNote: date.valueOf(), 
-				userId: localStorage.getItem("Meteor.userId")
-			});
-			
+			var search = $('#actionSearch').val();
+			if(search == ""){
+				var date = new Date();
+				Notes.insert({
+					content: 'New note', 
+					dateNote: date.valueOf(), 
+					userId: localStorage.getItem("Meteor.userId")
+				});
+			}else{
+				Session.set("search_query", '');
+				$("#actionSearch").val('');
+			}			
 		}
+
+		var search = $('#actionSearch').val();
+		if(search != ""){
+			$('#actionSearch').val('');
+			Session.set("search_query", '');
+		}
+
 		var note = $('#editNote').val();
 		if(note == ""){
 			$(".hamster-scrollbar a").first().click();

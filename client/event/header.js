@@ -10,8 +10,10 @@ Template.header.events({
 	    $(e.currentTarget).addClass( "active" );
 	    $('#editNote').val(note.content); // Too bad
 	},
-	'keyup #actionSearch': function(e){
+	'input #actionSearch': function(e){
 		var search = $('#actionSearch').val();
+		$("#editNote").val('');
+		$(".item").removeClass( "active" )
 		Session.set("search_query", search);
 	}
 	
