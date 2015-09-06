@@ -15,4 +15,14 @@ Template.header.helpers({
     	var date = new Date();
         return moment(date.valueOf()).calendar();
     },
+    notes: function(){
+        var searchVal = Session.get("search_query");
+        if (searchVal != null) {
+            console.log(searchVal);
+            var notes = Notes.find({userId:localStorage.getItem("Meteor.userId"), content: {$regex: searchVal}},{sort: {'dateNote': -1}});
+        }else{
+            var notes = Notes.find({userId:localStorage.getItem("Meteor.userId")},{sort: {'dateNote': -1}});
+        };
+        return notes;
+    }
 });

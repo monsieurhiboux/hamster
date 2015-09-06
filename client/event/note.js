@@ -1,19 +1,17 @@
 Template.note.events({
-	'focus #viewAddNote': function(e){
-		var date = new Date();
-		Notes.insert({
-			content: 'New note', 
-			dateNote: date.valueOf(), 
-			userId: localStorage.getItem("Meteor.userId")
-		});
-		$(".hamster-scrollbar a").first().click();
-	},
-	'focus #viewEditNote': function(e){
-		var id = $(e.currentTarget).attr('data');
-		if(id){
+	'focus #editNote': function(e){
+		var notesNumber = $('.hamster-scrollbar').attr('data');
+		if(notesNumber == 0){
+			var date = new Date();
+			Notes.insert({
+				content: 'New note', 
+				dateNote: date.valueOf(), 
+				userId: localStorage.getItem("Meteor.userId")
+			});
 			
 		}
-		else{
+		var note = $('#editNote').val();
+		if(note == ""){
 			$(".hamster-scrollbar a").first().click();
 		}
 	},
@@ -42,6 +40,15 @@ Template.note.events({
 	'click #actionDeleteNote': function (e) {
 		var id = $(e.currentTarget).attr('data');
 		Notes.remove(({_id:id}));
+		var notesNumber = $('.hamster-scrollbar').attr('data');
+		if(notesNumber == 1){
+			var date = new Date();
+			Notes.insert({
+				content: 'New note', 
+				dateNote: date.valueOf(), 
+				userId: localStorage.getItem("Meteor.userId")
+			});
+		}
 		$(".hamster-scrollbar a").first().click();
 	}
 });

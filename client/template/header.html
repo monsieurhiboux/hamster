@@ -2,11 +2,11 @@
 	<div class="ui vertical secondary fluid menu">
 		<div class="item">
 			<div class="ui transparent icon input">
-				<input type="text" placeholder="Search">
+				<input type="text" id="actionSearch" placeholder="Search">
 				<i class="search icon"></i>
 			</div>
 		</div>
-		<div class="hamster-scrollbar">
+		<div class="hamster-scrollbar" data="{{notes.count}}">
 			{{#each notes}}
 				<a class="teal item" id="actionViewNote" data="{{_id}}">
 					{{ shortString content }}

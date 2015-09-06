@@ -8,6 +8,11 @@ Template.header.events({
 	    Session.set('noteUserId', note.userId);
 	    $(".item").removeClass( "active" )
 	    $(e.currentTarget).addClass( "active" );
-	    $('#editNote').val(note.content);
+	    $('#editNote').val(note.content); // Too bad
+	},
+	'keyup #actionSearch': function(e){
+		var search = $('#actionSearch').val();
+		Session.set("search_query", search);
 	}
+	
 });
