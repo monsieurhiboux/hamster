@@ -49,6 +49,7 @@ Template.note.events({
 			userId: localStorage.getItem("Meteor.userId")
 		});
 		$(".hamster-scrollbar a").first().click();
+		setTimeout(function(){$("#editNote").focus()}, 50); // too bad
 	},
 	'click #actionDeleteNote': function (e) {
 		var id = $(e.currentTarget).attr('data');
@@ -63,5 +64,6 @@ Template.note.events({
 			});
 		}
 		$(".hamster-scrollbar a").first().click();
+		setTimeout(function(){$("#editNote").focus()}, 50); // too bad
 	}
 });
