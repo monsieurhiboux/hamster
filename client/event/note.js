@@ -6,7 +6,16 @@ Template.note.events({
 			dateNote: date.valueOf(), 
 			userId: localStorage.getItem("Meteor.userId")
 		});
-		$( "#viewEditNote form" ).focus();
+		$(".hamster-scrollbar a").first().click();
+	},
+	'focus #viewEditNote': function(e){
+		var id = $(e.currentTarget).attr('data');
+		if(id){
+			
+		}
+		else{
+			$(".hamster-scrollbar a").first().click();
+		}
 	},
 	'input #viewEditNote': function(e){
 		e.preventDefault();
@@ -28,6 +37,7 @@ Template.note.events({
 			dateNote: date.valueOf(), 
 			userId: localStorage.getItem("Meteor.userId")
 		});
+		$(".hamster-scrollbar a").first().click();
 	},
 	'click #actionDeleteNote': function (e) {
 		var id = $(e.currentTarget).attr('data');

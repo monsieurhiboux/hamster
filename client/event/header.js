@@ -8,5 +8,6 @@ Template.header.events({
 	    Session.set('noteUserId', note.userId);
 	    $(".item").removeClass( "active" )
 	    $(e.currentTarget).addClass( "active" );
+	    $('#editNote').val(note.content);
 	}
 });

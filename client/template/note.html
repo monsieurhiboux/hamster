@@ -15,11 +15,11 @@
 	<div class="note-content">
 		{{#if notes.count}}
 			<form id="viewEditNote" data="{{noteId}}">
-				<textarea autofocus="on" id="editNote">{{ noteContent }}</textarea>
+				<textarea autofocus="on" id="editNote">{{noteContent}}</textarea>
 			</form>
 		{{else}}
 			<form id="viewAddNote">
-				<textarea autofocus="on" id="addNote">New note</textarea>
+				<textarea id="addNote" autofocus="on"></textarea>
 			</form>
 		{{/if}}
 	</div>
