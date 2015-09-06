@@ -19,14 +19,14 @@ header{
 	width: 250px;
 	height:100%;
 	padding-top: 0.3rem;
-	box-shadow: -2px -2px 5px 1px rgba(0, 0, 0, 0.03) inset !important;
+	box-shadow: -2px -2px 5px 1px rgba(169, 169, 169, 0.18) inset !important;
 	.fluid{
 		margin: 0 !important;
 	}
 	.hamster-scrollbar{
 		    position: fixed;
 		    top: 3.5rem;
-		    bottom: 2.8rem;
+		    bottom: 2.5rem;
 		    width: 250px;
 		    heigt:inherit !important;
 	}	
@@ -53,8 +53,11 @@ header{
 		position: fixed;
 		bottom: 0;
 		width: 250px;
-		button{
-			border-radius: 0 !important;
+		i.icon {
+		    color: rgb(255, 255, 255) !important;
+		    &&:hover{
+		    	color: rgb(255, 255, 255) !important;
+		    }
 		}
 	}
 }
@@ -65,7 +68,7 @@ main{
 	left: 250px;
 	top: 0;
 	right: 0;
-	background-color: #FBFBFB;
+	background-color: #F3F3F3;
     height: 100%;
     padding: 0 1.5rem;
     border-left: 1px solid #E2E2E2;
@@ -88,7 +91,7 @@ main{
     .note-content{
     	textarea{
     		border: 0;
-    		background-color: #FBFBFB;
+    		background-color: #F3F3F3;
     		width: 100%;
     		resize: none;
     		bottom: 0;
