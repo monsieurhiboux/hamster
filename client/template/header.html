@@ -7,12 +7,14 @@
 			</div>
 		</div>
 		<div class="hamster-scrollbar" data="{{notes.count}}">
-			{{#each notes}}
-				<a class="teal item" id="actionViewNote" data="{{_id}}">
-					{{ shortString content }}
-					<p>{{momentShort dateNote}}</p>
-				</a>
-			{{/each}}
+			<div>
+				{{#each notes}}
+					<a class="teal item" id="actionViewNote" data="{{_id}}">
+						{{ shortString content }}
+						<p>{{momentShort dateNote}}</p>
+					</a>
+				{{/each}}
+			</div>
 		</div>
 	</div>
 	<div class="header-config">

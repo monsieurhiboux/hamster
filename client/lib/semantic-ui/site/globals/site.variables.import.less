@@ -10,6 +10,10 @@ button:hover, a:hover{
     cursor: default !important;
 }
 
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+    margin: 0 0 !important;
+}
+
 
 header{
 	width: 250px;
@@ -20,9 +24,13 @@ header{
 		margin: 0 !important;
 	}
 	.hamster-scrollbar{
-		
+		    position: fixed;
+		    top: 3.5rem;
+		    bottom: 2.8rem;
+		    width: 250px;
+		    heigt:inherit !important;
 	}	
-	.hamster-scrollbar > .item{
+	.hamster-scrollbar .item{
 		margin-bottom:0.5rem !important;
 		&&:hover{
 			cursor: default !important;
@@ -38,7 +46,7 @@ header{
 	    color: rgb(39, 39, 39) !important;
 	}
 	.ui.secondary.menu .dropdown.item:hover, .ui.secondary.menu .link.item:hover, .ui.secondary.menu a.item:hover {
-	    background: rgba(255, 195, 5, 0.77);
+	    background: rgba(236, 236, 236, 0.75);
 	    color: rgb(39, 39, 39);
 	}
 	.header-config{
