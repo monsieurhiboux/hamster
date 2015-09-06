@@ -2,9 +2,10 @@ Template.layout.onRendered(function(){
 });
 
 Template.header.onRendered(function(){
-  this.$('.user').popup();
+  this.$('.pop').popup();
+  
 });
 
 Template.note.onRendered(function(){
-  this.$('.share').popup();
+  this.$('.pop').popup();
 });

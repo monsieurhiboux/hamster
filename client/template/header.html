@@ -7,10 +7,19 @@
 			</div>
 		</div>
 		<div class="hamster-scrollbar">
-			<a class="teal item active">
-				New note <i class="user icon link" data-content="Just me" data-variation="basic tiny" data-position="bottom center"></i>
-				<p>By Hiboux, 03/09/2015</p>
-			</a>
+			{{#if notes.count}}
+				{{#each notes}}
+					<a class="teal item" id="actionViewNote" data="{{_id}}">
+						{{ shortString content }}
+						<p>{{momentShort dateNote}}</p>
+					</a>
+				{{/each}}
+			{{else}}
+				<a class="teal item active">
+					New note 
+					<p>{{momentShortSet}}</p>
+				</a>
+			{{/if}}
 		</div>
 	</div>
 	<div class="header-config">

@@ -5,9 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 semantic:ui
 flemay:less-autoprefixer
 iron:router
 maazalik:malihu-jquery-custom-scrollbar
+
+momentjs:moment
+lbee:moment-helpers
