@@ -8,5 +8,4 @@ Template.header.onRendered(function(){
 
 Template.note.onRendered(function(){
   this.$('.pop').popup();
-  this.$("textarea").mCustomScrollbar({theme:"minimal-dark"});
 });
