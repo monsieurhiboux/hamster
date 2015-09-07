@@ -12,3 +12,7 @@ maazalik:malihu-jquery-custom-scrollbar
 
 momentjs:moment
 lbee:moment-helpers
+
+accounts-password
+useraccounts:core
+useraccounts:semantic-ui
