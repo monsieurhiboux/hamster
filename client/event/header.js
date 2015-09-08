@@ -25,5 +25,8 @@ Template.header.events({
 	},
 	'click .header-pop-close': function (e) {
 		$('.header-pop').transition('fade up');
-	}
+	},
+	'click .header-config-logout': function (e) {
+		Meteor.logout();
+	},
 });

@@ -1,35 +1,68 @@
 <template name="header">
 	<div class="ui vertical secondary fluid menu">
-		<div class="item">
-			<div class="ui transparent icon input">
-				<input type="text" id="actionSearch" placeholder="Search">
-				<i class="search icon"></i>
+		{{#if currentUser}}
+			<div class="item">
+				<div class="ui transparent icon input">
+					<input type="text" id="actionSearch" placeholder="Search">
+					<i class="search icon"></i>
+				</div>
 			</div>
-		</div>
-		<div class="hamster-scrollbar" data="{{notes.count}}">
-			<div>
-				{{#each notes}}
-					<a class="teal item" id="actionViewNote" data="{{_id}}">
-						{{ shortString content }}
-						<p>{{momentShort dateNote}}</p>
+		{{else}}
+			<div class="item">
+				<div class="ui transparent icon input">
+					<input type="text" id="actionSearch" placeholder="Search" disabled>
+					<i class="search icon"></i>
+				</div>
+			</div>
+		{{/if}}	
+		{{#if currentUser}} 
+			<div class="hamster-scrollbar" data="{{notes.count}}">
+				<div>
+					{{#each notes}}
+						<a class="teal item" id="actionViewNote" data="{{_id}}">
+							{{ shortString content }}
+							<p>{{momentShort dateNote}}</p>
+						</a>
+					{{/each}}
+				</div>
+			</div>
+		{{else}}
+			<div class="hamster-scrollbar" >
+				<div>
+					<a class="teal item active" id="actionViewNote" >
+						Welcome To hamster!
+						<p>{{momentShort moNow}}</p>
 					</a>
-				{{/each}}
+				</div>
+			</div>
+		{{/if}}	
+	</div>
+	{{#if currentUser}} 
+      	<div class="header-config-logout">
+			<div class="ui divided selection list">
+			  <a class="item">
+			    <div class="ui yellow horizontal label"><i class="wifi icon"></i> Logout</div>
+			    You are connected
+			  </a>
 			</div>
 		</div>
-	</div>
-	<div class="header-config">
+    {{else}} 
+      	<div class="header-config">
 			<div class="ui divided selection list">
 			  <a class="item">
 			    <div class="ui yellow horizontal label"><i class="wifi icon"></i> Connect you</div>
 			  </a>
 			</div>
-	</div>
-	<div class="header-pop">
-		<div class="ui divided selection list header-pop-close">
-		  <a class="item">
-		    <div class="ui yellow horizontal label"><i class="wifi icon"></i> Connect you</div>
-		  </a>
 		</div>
-		{{> atForm}}
-	</div>
+		<div class="header-pop">
+			<div class="ui divided selection list header-pop-close">
+			  <a class="item">
+			    <div class="ui yellow horizontal label"><i class="wifi icon"></i> Connect you</div>
+			  </a>
+			</div>
+			{{> atForm}}
+		</div>
+    {{/if}}
+	
+	
 </template>
