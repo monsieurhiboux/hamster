@@ -19,5 +19,11 @@ Template.header.events({
 		if(search == ""){
 			setTimeout(function(){$(".hamster-scrollbar a").first().click()}, 50); // too bad
 		}
-	}	
+	},
+	'click .header-config': function (e) {
+		$('.header-pop').transition('fade up');
+	},
+	'click .header-pop-close': function (e) {
+		$('.header-pop').transition('fade up');
+	}
 });

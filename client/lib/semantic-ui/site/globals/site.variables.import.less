@@ -64,6 +64,54 @@ header{
 		    }
 		}
 	}
+	.header-pop{
+		display:none;
+		i.icon {
+		    color: rgb(255, 255, 255) !important;
+		    &&:hover{
+		    	color: rgb(255, 255, 255) !important;
+		    }
+		}
+		position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    width: 250px;
+	    background-color: #fff;
+	    padding: 0rem;
+	    .ui.segment {
+	    	padding: 0 0.5rem;
+	    	border:0;
+	    	box-shadow: inherit !important;
+	    }
+	    .ui.stacked.segment:after {
+	    	border:0;
+	    }
+	    .at-pwd-form{
+	        padding: 0 0.5rem;
+	    }
+	    .at-title{
+	    	display:none;
+	    }
+	    .ui.message {
+		    background: #fff;
+		    margin: 0.5rem 0.5rem;
+		    padding: 0 0.5rem;
+		    box-shadow: inherit; 
+		    font-size: 1rem;
+		}
+		.ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="url"] {
+		    padding: 0.5rem;
+		    font-size: 0.95rem;
+		}
+		.ui.button {
+		    padding: 0.5rem;
+		    font-weight: normal;
+		    cursor: default !important;
+		}
+		label{
+			display:none !important;
+		}
+	}
 }
 
 main{
