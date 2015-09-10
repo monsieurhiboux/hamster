@@ -11,8 +11,7 @@ Router.route('/', {
 	action: function () {
 	    if (this.ready()){
 	    	document.title = "Hamster";
-	      	this.render('note');
-
+	      	this.render('home');
 	    }
 	}
 });
