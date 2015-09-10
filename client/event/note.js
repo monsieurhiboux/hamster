@@ -1,6 +1,6 @@
 Template.note.events({
 	'focus #editNote': function(e){
-		var notesNumber = $('.hamster-scrollbar').attr('data');
+		var notesNumber = $('#noteNumber').attr('data');
 		if(notesNumber == 0){
 			var search = $('#actionSearch').val();
 			if(search == ""){
@@ -54,7 +54,7 @@ Template.note.events({
 	'click #actionDeleteNote': function (e) {
 		var id = $(e.currentTarget).attr('data');
 		Notes.remove(({_id:id}));
-		var notesNumber = $('.hamster-scrollbar').attr('data');
+		var notesNumber = $('#noteNumber').attr('data');
 		if(notesNumber == 1){
 			var date = new Date();
 			Notes.insert({

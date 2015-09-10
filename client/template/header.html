@@ -15,27 +15,27 @@
 				</div>
 			</div>
 		{{/if}}	
-		{{#if currentUser}} 
-			<div class="hamster-scrollbar" data="{{notes.count}}">
-				<div>
-					{{#each notes}}
-						<a class="teal item" id="actionViewNote" data="{{_id}}">
-							{{ shortString content }}
-							<p>{{momentShort dateNote}}</p>
-						</a>
-					{{/each}}
-				</div>
+		<div class="hamster-scrollbar" >
+			<div>
+				{{#if currentUser}}
+						<div id="noteNumber" data="{{notes.count}}">
+							{{#each notes}}
+								<a class="teal item" id="actionViewNote" data="{{_id}}">
+									{{ shortString content }}
+									<p>{{momentShort dateNote}}</p>
+								</a>
+							{{/each}}
+						</div>
+				{{else}}
+						<div>
+							<a class="teal item active" id="actionViewNote" >
+								Welcome To hamster!
+								<p>{{momentShort moNow}}</p>
+							</a>
+						</div>
+				{{/if}}
 			</div>
-		{{else}}
-			<div class="hamster-scrollbar" >
-				<div>
-					<a class="teal item active" id="actionViewNote" >
-						Welcome To hamster!
-						<p>{{momentShort moNow}}</p>
-					</a>
-				</div>
-			</div>
-		{{/if}}	
+		</div>	
 	</div>
 	{{#if currentUser}} 
       	<div class="header-config-logout">
