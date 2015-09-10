@@ -165,8 +165,36 @@ main{
 		    right: 0;
 		    padding: 0 1.5rem;
 		    font-size: 0.95rem;
+		    text-align: justify;
     	}
     }
+
+    .darkMode{
+    	position:fixed;
+    	top:0;
+    	left:0;
+    	right:0;
+    	bottom:0;
+    	background-color: #191919;
+    	.note-action-bar{
+    		padding: 0.5rem 1.5rem;
+    	}
+    	.note-action-bar-date{
+    		color: #FFF;
+    	}
+    	.note-content{
+	    	textarea{
+	    		background-color: #191919;
+	    		color:#fff;
+	    		font-size: 1.2rem;
+			    line-height: 2rem;
+			    padding-right: 20%;
+			    padding-left: 20%;
+			    text-align: justify;
+	    	}
+	    }
+    }
+
 }
 
  @media screen and (max-width: 600px) {
@@ -176,6 +204,16 @@ main{
         .note-content textarea {
 		    border: 0;
 		    padding: 0 0.5rem;
+		}
+		.darkMode{
+			.note-action-bar{
+				padding: 0.5rem 0.5rem !important;
+			}
+			.note-content{
+	    	textarea{
+			    padding:0.5rem;
+	    	}
+	    }
 		}
       }
       header {

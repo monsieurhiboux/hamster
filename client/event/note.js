@@ -24,6 +24,18 @@ Template.note.events({
 		}
 		
 	},
+	'input #viewEditNoteDarkMode': function(e){
+		e.preventDefault();
+		var note = $('#editNoteDarkMode').val();
+		var date = new Date();
+		var id = $(e.currentTarget).attr('data');
+		Notes.update({_id:id},{$set: {
+			content: note,
+			dateNote : date.valueOf()
+		}});
+		Session.set('noteDateNote', date.valueOf());
+		$('#editNote').val(note);
+	},
 	'input #viewEditNote': function(e){
 		e.preventDefault();
 		var note = $('#editNote').val();
@@ -60,5 +72,8 @@ Template.note.events({
 		}
 		$(".hamster-scrollbar a").first().click();
 		setTimeout(function(){$("#editNote").focus()}, 50); // too bad
-	}
+	},
+	'click #actionDarkMode': function (e) {
+		$('.darkMode').transition('fade up');
+	},
 });

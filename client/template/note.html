@@ -4,15 +4,31 @@
 			<button class="ui compact tiny icon button note-action-bar-add" id="actionAddNote">
 			  <i class="plus icon"></i>
 			</button>
+			<button class="ui compact tiny icon button note-action-bar-add" id="actionDarkMode">
+			  <i class="adjust icon"></i>
+			</button>
 			<button id="actionDeleteNote" data="{{noteId}}" class="ui compact tiny icon button note-action-bar-option">
 			  <i class="trash alternate icon"></i>
 			</button>
-			<div class="note-action-bar-date">{{momentShort noteDateNote}}</div>
+			<div class="note-action-bar-date">{{momentShort noteDateNote}} </div>
 		</div>
 		<div class="note-content">
 			<form id="viewEditNote" data="{{noteId}}">
 				<textarea autofocus="on" id="editNote">{{noteContent}}</textarea>
 			</form>
+		</div>
+		<div class="darkMode" style="display:none;">
+			<div class="note-action-bar">
+				<button class="ui compact tiny icon button note-action-bar-add inverted" id="actionDarkMode">
+				  <i class="adjust icon"></i>
+				</button>
+				<div class="note-action-bar-date">{{momentShort noteDateNote}} </div>
+			</div>
+			<div class="note-content">
+				<form id="viewEditNoteDarkMode" data="{{noteId}}">
+					<textarea autofocus="on" id="editNoteDarkMode">{{noteContent}}</textarea>
+				</form>
+			</div>
 		</div>
 	{{else}}
 			<div class="note-action-bar">
