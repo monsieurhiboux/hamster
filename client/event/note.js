@@ -75,5 +75,5 @@ Template.note.events({
 	},
 	'click #actionDarkMode': function (e) {
 		$('.darkMode').transition('fade up');
-	},
+	}
 });

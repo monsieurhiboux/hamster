@@ -6,6 +6,7 @@ Template.header.events({
 	    Session.set('noteContent', note.content);
 	    Session.set('noteDateNote', note.dateNote);
 	    Session.set('noteUserId', note.userId);
+	    Session.set('noteShare', note.share);
 	    $(".item").removeClass( "active" )
 	    $(e.currentTarget).addClass( "active" );
 	    $('#editNote').val(note.content); // Too bad

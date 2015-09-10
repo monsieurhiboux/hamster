@@ -1,4 +1,5 @@
-Template.layout.onRendered(function(){
+Template.note.onRendered(function(){
+	$('.pop').popup({hoverable: true});
 });
 
 Template.header.onRendered(function(){
@@ -6,5 +7,6 @@ Template.header.onRendered(function(){
   setTimeout(function(){$(".hamster-scrollbar a").first().click()}, 50); // too bad
 });
 
-Template.note.onRendered(function(){
+Template.share.onRendered(function(){
+	this.$('.share').transition('fade');
 });

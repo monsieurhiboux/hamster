@@ -17,7 +17,7 @@ button:hover, a:hover{
 
 header{
 	width: 250px;
-	height:100%;
+	height: 100%;
 	padding-top: 0.3rem;
 	box-shadow: -2px -2px 5px 1px rgba(224, 224, 224, 0.09) inset !important;
 	.fluid{
@@ -31,11 +31,11 @@ header{
 		    top: 3rem;
 		    bottom: 2.5rem;
 		    width: 250px;
-		    heigt:inherit !important;
+		    heigt: inherit !important;
 	}	
 	.hamster-scrollbar .item{
 	    font-size: 0.95rem;
-		margin-bottom:0.5rem !important;
+		margin-bottom: 0.5rem !important;
 		&&:hover{
 			cursor: default !important;
 		}
@@ -91,17 +91,17 @@ header{
 	    padding: 0rem;
 	    .ui.segment {
 	    	padding: 0 0.5rem;
-	    	border:0;
+	    	border: 0;
 	    	box-shadow: inherit !important;
 	    }
 	    .ui.stacked.segment:after {
-	    	border:0;
+	    	border: 0;
 	    }
 	    .at-pwd-form{
 	        padding: 0 0.5rem;
 	    }
 	    .at-title{
-	    	display:none;
+	    	display: none;
 	    }
 	    .ui.message {
 		    background: #fff;
@@ -127,7 +127,7 @@ header{
 }
 
 main{
-	min-width:200px;
+	min-width: 200px;
 	position: absolute;
 	left: 250px;
 	top: 0;
@@ -170,11 +170,11 @@ main{
     }
 
     .darkMode{
-    	position:fixed;
-    	top:0;
-    	left:0;
-    	right:0;
-    	bottom:0;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
     	background-color: #191919;
     	.note-action-bar{
     		padding: 0.5rem 1.5rem;
@@ -185,7 +185,7 @@ main{
     	.note-content{
 	    	textarea{
 	    		background-color: #191919;
-	    		color:#fff;
+	    		color: #fff;
 	    		font-size: 1.2rem;
 			    line-height: 2rem;
 			    padding-right: 20%;
@@ -197,9 +197,25 @@ main{
 
 }
 
+.share{
+	padding-top: 0.5rem;
+	padding-right: 20%;
+	padding-left: 20%;
+	display: none;
+	.top-bar{
+		text-align: center;
+		margin-bottom:1rem;
+	}
+	.content{
+		font-size: 1.2rem;
+	    line-height: 2rem;
+	    text-align: justify;
+	}
+}
+
  @media screen and (max-width: 600px) {
       main {
-        left:0;
+        left: 0;
         padding: 0 0.5rem;
         .note-content textarea {
 		    border: 0;
@@ -211,12 +227,15 @@ main{
 			}
 			.note-content{
 	    	textarea{
-			    padding:0.5rem;
+			    padding: 0.5rem;
 	    	}
 	    }
 		}
       }
       header {
-        display:none;
+        display: none;
+      }
+      .share{
+      	padding: 0.5rem;
       }
     }
