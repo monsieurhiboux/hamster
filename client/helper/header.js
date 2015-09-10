@@ -1,17 +1,15 @@
 Template.header.helpers({
     shortString: function(string) {
         var stringLength = string.length;
-    	if( stringLength > 25){
-    		return string.substr(0,25)+'...';
-    	}
-        else if(stringLength == 0){
-            string = "New note";
-            return string;
+        if(stringLength == 0){
+            var string = "New note";
         }
-    	else{
-            string = string.split("\n",1);
-    		return string;
-    	}
+        if(stringLength > 25){
+            var string = string.substr(0,25)+'...';
+        }
+        var string = string.split("\n",1);
+    	
+    	return string;
     },
     momentShort: function(string) {
         return moment(string).calendar();
