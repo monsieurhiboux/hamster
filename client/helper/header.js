@@ -5,6 +5,7 @@ Template.header.helpers({
     		return string.substr(0,25)+'...';
     	}
     	else{
+            string = string.split("\n",1);
     		return string;
     	}
     },
