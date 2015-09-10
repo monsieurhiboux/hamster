@@ -22,23 +22,18 @@ Template.note.events({
 			Session.set("search_query", '');
 			
 		}
-		var note = $('#editNote').val();
-		if(note == ""){
-			$(".hamster-scrollbar a").first().click();
-		}
+		
 	},
 	'input #viewEditNote': function(e){
 		e.preventDefault();
 		var note = $('#editNote').val();
-		if(note != false){
-			var date = new Date();
-			var id = $(e.currentTarget).attr('data');
-			Notes.update({_id:id},{$set: {
-				content: note,
-				dateNote : date.valueOf()
-			}});
-			Session.set('noteDateNote', date.valueOf());
-		};
+		var date = new Date();
+		var id = $(e.currentTarget).attr('data');
+		Notes.update({_id:id},{$set: {
+			content: note,
+			dateNote : date.valueOf()
+		}});
+		Session.set('noteDateNote', date.valueOf());
 		$(".hamster-scrollbar a").first().click();
 	},
 	'click #actionAddNote': function (e) {
