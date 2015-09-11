@@ -1,7 +1,10 @@
 <template name="header">
 	<div class="ui vertical secondary fluid menu">
 		{{#if currentUser}}
-			<div class="item">
+			<button class="ui compact tiny icon green button header-action-crypt">
+			  <i class="lock icon"></i>
+			</button>
+			<div class="item hamster-search">
 				<div class="ui transparent icon input">
 					<input type="text" id="actionSearch" placeholder="Search">
 					<i class="search icon"></i>
