@@ -133,6 +133,7 @@ header{
 			display:none !important;
 		}
 	}
+	
 }
 
 main{
@@ -186,10 +187,17 @@ main{
     	bottom: 0;
     	background-color: #191919;
     	.note-action-bar{
-    		padding: 0.5rem 1.5rem;
+    		padding: 0.5rem 0.5rem;
     	}
+    	.heading{
+		    margin-top: -1.7rem;
+			margin-bottom: 0.5rem;
+			margin-left: 2.5rem;
+			color: #FFF;
+		}
     	.note-action-bar-date{
     		color: #FFF;
+    		margin-top: -1.9rem;
     	}
     	.note-content{
 	    	textarea{
@@ -203,24 +211,37 @@ main{
 	    	}
 	    }
     }
-
+    .security-pop{
+		display:none;
+		position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+	    background-color: #fff;
+	    .header{
+	    	padding: 0.4rem 0.5rem;
+	    	color: #333;
+	    }
+	    .header:hover{	
+	    	cursor: default !important;
+	    }
+	    .header-action-crypt{
+		    margin: 0 !important;
+		}
+		.heading{
+		    margin-top: -1.7rem;
+			margin-bottom: 0.5rem;
+			margin-left: 2.5rem;
+		}
+		.content{
+			padding: 0.4rem;
+			padding-right: 20%;
+			padding-left: 20%;
+		}
+	}
 }
 
-.share{
-	padding-top: 0.5rem;
-	padding-right: 20%;
-	padding-left: 20%;
-	display: none;
-	.top-bar{
-		text-align: center;
-		margin-bottom:1rem;
-	}
-	.content{
-		font-size: 1.2rem;
-	    line-height: 2rem;
-	    text-align: justify;
-	}
-}
 
  @media screen and (max-width: 600px) {
       main {
@@ -234,11 +255,14 @@ main{
 			.note-action-bar{
 				padding: 0.5rem 0.5rem !important;
 			}
-			.note-content{
-	    	textarea{
-			    padding: 0.5rem;
+			.heading{
+	    		color:#191919 !important;
 	    	}
-	    }
+			.note-content{
+		    	textarea{
+				    padding: 0.5rem;
+		    	}
+	    	}
 		}
       }
       header {

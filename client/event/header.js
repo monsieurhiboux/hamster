@@ -30,4 +30,7 @@ Template.header.events({
 	'click .header-config-logout': function (e) {
 		Meteor.logout();
 	},
+	'click #actionSecurity': function (e) {
+		$('.security-pop').transition('fade up');
+	}
 });

@@ -16,3 +16,4 @@ lbee:moment-helpers
 accounts-password
 useraccounts:core
 useraccounts:semantic-ui
+mrt:jsencrypt

@@ -22,6 +22,7 @@
 				<button class="ui compact tiny icon button note-action-bar-add inverted" id="actionDarkMode">
 				  <i class="adjust icon"></i>
 				</button>
+				<div class="heading">Night mode</div>
 				<div class="note-action-bar-date">{{momentShort noteDateNote}} </div>
 			</div>
 			<div class="note-content">
@@ -45,6 +46,48 @@ Connect you for add edit, view and share your notes everywhere.
 </textarea>
 				</form>
 			</div>
+	{{/if}}
+	{{#if currentUser}} 
+		<div class="security-pop">
+			<div class="header" id="actionSecurity">
+				<button class="ui compact tiny icon green button header-action-crypt">
+				  <i class="lock icon"></i>
+				</button>
+				<div class="heading">Security</div>
+			</div>
+			<div class="content">
+				<div class="ui horizontal segments">
+				  <div class="ui segment">
+				    <div class="ui two column very relaxed grid">
+					  <div class="column">
+					    <div class="ui form">
+						  <div class="field">
+						    <label>private_key</label>
+						    <textarea name="private_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
+						  </div>
+						  <div class="field">
+						    <label>public_key</label>
+						    <textarea name="public_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
+						  </div>
+						  <p>
+					          <button type="button" id="generate_private_key" name="generate" class="ui yellow button fluid tiny">Generate</button>
+					      </p>
+						</div>
+					  </div>
+					  <div class="ui vertical divider"></div>
+					  <div class="column">
+					    <p></p>
+					    <p></p>
+					    <p></p>
+					    <p></p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				
+				
+			</div>
+		</div>
 	{{/if}}
 	
 </template>

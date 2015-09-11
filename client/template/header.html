@@ -1,7 +1,7 @@
 <template name="header">
 	<div class="ui vertical secondary fluid menu">
 		{{#if currentUser}}
-			<button class="ui compact tiny icon green button header-action-crypt">
+			<button class="ui compact tiny icon green button header-action-crypt" id="actionSecurity">
 			  <i class="lock icon"></i>
 			</button>
 			<div class="item hamster-search">
@@ -21,21 +21,21 @@
 		<div class="hamster-scrollbar" >
 			<div>
 				{{#if currentUser}}
-						<div id="noteNumber" data="{{notes.count}}">
-							{{#each notes}}
-								<a class="teal item" id="actionViewNote" data="{{_id}}">
-									{{shortString content}} <br />
-									<p>{{momentShort dateNote}}</p>
-								</a>
-							{{/each}}
-						</div>
-				{{else}}
-						<div>
-							<a class="teal item active" id="actionViewNote" >
-								Welcome To hamster!
-								<p>{{momentShort moNow}}</p>
+					<div id="noteNumber" data="{{notes.count}}">
+						{{#each notes}}
+							<a class="teal item" id="actionViewNote" data="{{_id}}">
+								{{shortString content}} <br />
+								<p>{{momentShort dateNote}}</p>
 							</a>
-						</div>
+						{{/each}}
+					</div>
+				{{else}}
+					<div>
+						<a class="teal item active" id="actionViewNote" >
+							Welcome To hamster!
+							<p>{{momentShort moNow}}</p>
+						</a>
+					</div>
 				{{/if}}
 			</div>
 		</div>	
@@ -49,6 +49,7 @@
 			  </a>
 			</div>
 		</div>
+		
     {{else}} 
       	<div class="header-config">
 			<div class="ui divided selection list">
