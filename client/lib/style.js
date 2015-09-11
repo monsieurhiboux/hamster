@@ -1,5 +1,4 @@
 Template.note.onRendered(function(){
-	$('.pop').popup({hoverable: true});
 });
 
 Template.header.onRendered(function(){
