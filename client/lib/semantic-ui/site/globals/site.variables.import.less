@@ -221,6 +221,8 @@ main{
 	    .header{
 	    	padding: 0.4rem 0.5rem;
 	    	color: #333;
+	    	width:250px;
+	    	height:100%;
 	    }
 	    .header:hover{	
 	    	cursor: default !important;
@@ -234,9 +236,14 @@ main{
 			margin-left: 2.5rem;
 		}
 		.content{
-			padding: 0.4rem;
-			padding-right: 20%;
-			padding-left: 20%;
+			position: fixed;
+		    padding: 0.7rem 1.5rem;
+		    left: 250px;
+		    top: 0;
+		    bottom: 0;
+		    border-left: 1px solid #E2E2E2;
+		    max-width:800px;
+		    background-color: #fff;
 		}
 	}
 }
@@ -262,6 +269,15 @@ main{
 				    padding: 0.5rem;
 		    	}
 	    	}
+		}
+		.security-pop{
+			.header{
+				width: 42px;
+			}
+			.content{
+				left: 42px;
+				padding: 0.7rem 0.5rem;
+			}
 		}
       }
       header {

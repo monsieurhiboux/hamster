@@ -44,43 +44,33 @@ Connect you for add edit, view and share your notes everywhere.
 				</form>
 			</div>
 	{{/if}}
+
 	{{#if currentUser}} 
 		<div class="security-pop">
-			<div class="header" id="actionSecurity">
-				<button class="ui compact tiny icon yellow button header-action-crypt">
-				  <i class="lock icon"></i>
+			<div class="header" >
+				<button class="ui compact tiny icon yellow button header-action-crypt" id="actionSecurity">
+				  <i class="setting icon"></i>
 				</button>
-				<div class="heading">Security</div>
+				<div class="heading">Hamster Settings</div>
 			</div>
 			<div class="content">
-				<div class="ui horizontal segments">
-				  <div class="ui segment">
-				    <div class="ui two column very relaxed grid">
-					  <div class="column">
-					    <div class="ui form">
-						  <div class="field">
-						    <label>private_key</label>
-						    <textarea name="private_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
-						  </div>
-						  <div class="field">
-						    <label>public_key</label>
-						    <textarea name="public_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
-						  </div>
-						  <p>
-					          <button type="button" id="generate_private_key" name="generate" class="ui yellow button fluid tiny">Generate</button>
-					      </p>
-						</div>
-					  </div>
-					  <div class="ui vertical divider"></div>
-					  <div class="column">
-					    <p></p>
-					    <p></p>
-					    <p></p>
-					    <p></p>
-					  </div>
-					</div>
-				  </div>
+				<h4>Your RSA key</h4>
+				<div class="ui message">
+				  <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
 				</div>
+			    <div class="ui form">
+				  <div class="field">
+				    <label>private_key</label>
+				    <textarea name="private_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
+				  </div>
+				  <div class="field">
+				    <label>public_key</label>
+				    <textarea name="public_key" rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 58px;"></textarea>
+				  </div>
+				  <p>
+			          <button type="button" id="generate_private_key" name="generate" class="ui yellow button fluid tiny">Generate</button>
+			      </p>
+				</div>					 
 			</div>
 		</div>
 	{{/if}}
